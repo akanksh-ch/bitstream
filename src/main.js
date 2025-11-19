@@ -10,12 +10,16 @@ uploader.addEventListener('change', e => {
   if (e.target.files[0].type.includes("video")) {
     let preview_elem = document.createElement("video")
     preview_elem.src = downloadFile(e.target.files[0].name)
+    preview_elem.style.width = '100%'
+    preview_elem.setAttribute('controls', '')
     files_preview.appendChild(preview_elem)
   }
 
   if (e.target.files[0].type.includes("audio")) {
     let preview_elem = document.createElement("audio")
     preview_elem.src = downloadFile(e.target.files[0].name)
+    preview_elem.style.width = '100%'
+    preview_elem.setAttribute('controls', '')
     files_preview.appendChild(preview_elem)
   }
 })
