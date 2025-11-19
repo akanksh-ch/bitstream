@@ -9,7 +9,12 @@
   </head>
   <body>
     <div id="app">
-      <div id="fileupload" class="step">Upload files here</div>
+      <div id="fileupload" class="step">
+        <label for="source">Upload files here</label>
+        <input type="file" name="source" id="source" accept="*" multiple>
+        <h4>files list:</h4>
+        <p id="fileslist"></p>
+      </div>
       <div id="action" class="step">Choose what you want to do</div>
       <div id="result" class="step">Results here</div>
     </div>
