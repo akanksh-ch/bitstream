@@ -24,7 +24,7 @@ uploader.addEventListener('change', e => {
   }
 
   if (e.target.files[0].type.includes("image")) {
-    let preview_elem = document.createElement("image")
+    let preview_elem = document.createElement("img")
     preview_elem.src = downloadFile(e.target.files[0].name)
     preview_elem.style.width = '100%'
     files_preview.appendChild(preview_elem)
