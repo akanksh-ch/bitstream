@@ -22,6 +22,13 @@ uploader.addEventListener('change', e => {
     preview_elem.setAttribute('controls', '')
     files_preview.appendChild(preview_elem)
   }
+
+  if (e.target.files[0].type.includes("image")) {
+    let preview_elem = document.createElement("image")
+    preview_elem.src = downloadFile(e.target.files[0].name)
+    preview_elem.style.width = '100%'
+    files_preview.appendChild(preview_elem)
+  }
 })
 
 function downloadFile(fileName, open=false) {
